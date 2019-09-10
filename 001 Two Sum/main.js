@@ -6,10 +6,10 @@
 var twoSum = function(nums, target) {
   map = {};
   for (let idx in nums) {
-    if (!dict[target - nums[idx]]) {
-      dict[nums[idx]] = idx;
+    if (!map[target - nums[idx]]) {
+      map[nums[idx]] = idx;
     } else {
-      return [~~dict[target - nums[idx]], ~~idx];
+      return [~~map[target - nums[idx]], ~~idx];
     }
   }
 };
